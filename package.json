@@ -1,0 +1,35 @@
+{
+  "name": "waterspot.lan",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.1",
+    "connect-flash": "~0.1.1",
+    "continuation-local-storage": "^3.1.7",
+    "cookie-parser": "~1.4.3",
+    "cryptiles": "^3.0.1",
+    "debug": "^2.2.0",
+    "dotenv": "^2.0.0",
+    "dottie": "^1.1.1",
+    "ejs": "~0.8.5",
+    "express": "~4.13.4",
+    "express-session": "^1.14.0",
+    "fs": "0.0.2",
+    "hogan-express": "^0.5.2",
+    "jade": "~1.11.0",
+    "morgan": "~1.7.0",
+    "passport": "~0.2.0",
+    "passport-local": "~1.0.0",
+    "path": "^0.12.7",
+    "pg": "^6.0.3",
+    "sendgrid": "^3.0.8",
+    "sequelize": "^3.23.6",
+    "serve-favicon": "~2.3.0",
+    "ssacl-attribute-roles": "0.0.5",
+    "underscore": "^1.8.3",
+    "validator": "^5.4.0"
+  }
+}
