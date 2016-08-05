@@ -15,7 +15,6 @@ var Sequelize = require('sequelize');
 //var flash = require('connect-flash');
 var pg = require('pg');
 var expressSession = require('express-session');
-var hogan = require('hogan-express');
 var adaro = require('adaro');
 
 // load globals
