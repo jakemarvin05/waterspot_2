@@ -3,7 +3,6 @@ var router = express.Router();
 
 
 // =====================================
-<<<<<<< HEAD
 // LOGIN ===============================
 // =====================================
 // show the login form
@@ -28,12 +27,6 @@ router.post('/login', passport.authenticate('local-login', {
 // =====================================
 router.get('/',CHECK_AUTH, function(req, res) {
     res.render('admin'); // load the index.ejs file
-=======
-// ADMIN PAGE (with login links) ========
-// =====================================
-router.get('/',CHECK_AUTH, function(req, res) {
-    res.render('dashboard', {layout:'admin', partials: {}}); // load the index.ejs file
->>>>>>> 9d0b864c079c904e99f8350ccacb1cacecbf971f
 });
 
 

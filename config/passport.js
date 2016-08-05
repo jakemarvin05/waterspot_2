@@ -106,12 +106,6 @@ function Passport (passport) {
             function(req, email, password, done) { // callback with email and password from our form
                 //var email = req.body.email = username;
                 //check if email and password are valid strings.
-
-<<<<<<< HEAD
-                console.log('@jake');
-
-=======
->>>>>>> 9d0b864c079c904e99f8350ccacb1cacecbf971f
                 if(typeof email !== 'string' || typeof password !== 'string') {
                     return res.status(400).send({
                         success: false,
