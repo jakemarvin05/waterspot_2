@@ -46,7 +46,6 @@ app.set('view engine', 'html');
 //
 //app.set('partials', defaultPartials);
 app.engine('html', adaro.dust({cache: false}));
-
 // Connect to the DataBase
 var sequelize = new Sequelize(configDB.url);
 sequelize
@@ -123,7 +122,5 @@ if (app.get('env') === 'development') {
 process.on('uncaughtException', function (err) {
     console.log('Caught exception: ' + err);
 });
-
-
 
 module.exports = app;

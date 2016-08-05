@@ -42,7 +42,11 @@ function checkAuth(req, res, next) {
     // handle response for both scenario.
     // DEPRECATED!
     //if (res) return res.status(403).send('Not authorised');
+<<<<<<< HEAD
     res.redirect('/admin/login');
+=======
+    res.redirect('/login');
+>>>>>>> 9d0b864c079c904e99f8350ccacb1cacecbf971f
     return false;
 }
 
