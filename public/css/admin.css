@@ -1,0 +1,248 @@
+body, html {
+    height: 100%;
+    color: #606060;
+    font-family: Roboto, sans-serif;
+    background: #f0f3f4;
+}
+a{
+    color: #337AB7;
+}
+h1,h2{
+    font-weight: bold;
+    color: #666;
+}
+h3{
+    font-weight: normal;
+    color: #888;
+}
+
+a:hover{
+    color: #1c3c5e;
+}
+
+.container-fluid {
+    padding: 0;
+    height: 100%;
+}
+
+section.header a.logo {
+    display: inline-block;
+    width: 100%;
+    max-width: 110px;
+}
+
+section.header a.logo #whiteLogo {
+    width: 100%;
+}
+
+section.header {
+    padding: 10px 20px;
+    background: #484848;
+    height: 50px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
+    z-index: 9999;
+    position: relative;
+}
+
+section.content-wrapper {
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    height: -moz-calc(100% - 50px);
+    height: -webkit-calc(100% - 50px);
+    height: calc(100% - 50px);
+}
+
+.left-sidebar {
+    flex: 1;
+    background: #484848;
+    color: #fff;
+    padding: 20px 0px 20px 4px;
+}
+
+.content-area {
+    flex: 7;
+    background: #f0f3f4;
+    overflow-y: scroll;
+}
+
+nav.left-menu li {
+    display: block;
+    padding: 0;
+}
+
+nav.left-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: small;
+    display: block;
+    padding: 10px 10px;
+}
+
+nav.left-menu li a:hover {
+    color: #f7941e;
+}
+
+nav.left-menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav.left-menu li i {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav.left-menu li a::after {
+    content: "\f107";
+    display: inline-block;
+    float: right;
+    font-family: FontAwesome;
+}
+
+nav.left-menu li:first-child a::after {
+    content: "";
+}
+
+nav.left-menu li.active {
+    background: #f79e34;
+}
+
+nav.left-menu ul.sub-menu {
+    margin-top: 4px;
+}
+
+nav.left-menu li.active-parent ul.sub-menu {
+    display: block;
+}
+
+nav.left-menu ul.sub-menu li a {
+    padding: 6px 0px 5px 40px;
+}
+
+nav.left-menu ul.sub-menu li a::after {
+    content: "";
+}
+
+nav.left-menu li.active a:hover {
+    color: #fff;
+}
+
+.content {
+    padding: 30px;
+}
+
+.panel-heading.admin-block-head {
+    border-bottom: 1px solid #ddd;
+}
+
+.admin-block-head h3.panel-title {
+    text-transform: uppercase;
+    color: #8a8a8a;
+    font-weight: normal;
+}
+.panel.block {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+div#calendar .fc-button {
+    background: none;
+    border: none;
+    box-shadow: none;
+    margin: 0px 15px;
+    padding: 0;
+}
+
+div#calendar .fc-today-button {
+    text-transform: uppercase;
+}
+
+div#calendar .fc-left h2 {
+    font-size: 24px;
+}
+
+.vendors-container .vendor {
+    display: flex;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+    padding: 10px 0px;
+}
+
+.vendors-container .vendor .vendor-avatar {
+    flex: 2;
+    margin-right: 20px;
+    margin-left: 15px;
+}
+
+.vendors-container .vendor .vendor-info {
+    flex: 12;
+}
+
+.vendors-container .vendor .vendor-actions {
+    flex: 2;
+    display: flex;
+    margin-right: 20px;
+}
+
+.vendors-container .vendor .vendor-avatar img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 50%;
+}
+
+.vendors-container .vendor .vendor-actions a {
+    display: block;
+    margin: auto;
+    font-size: 20px;
+}
+
+.vendors-container .vendor .vendor-info h6 {
+    color: #8a8a8a;
+    font-weight: 300;
+}
+.vendors-container {
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-top: -15px;
+}
+
+.vendors-container .vendor:last-child {
+    border-bottom: none;
+}
+.vendor-info h5 {
+    margin-top: 6px;
+}
+
+.form-control{
+    box-shadow: none;
+}
+.form-control:focus {
+    box-shadow: none;
+    border-color: #19bdf2;
+    background: #fff;
+}
+section.content-wrapper .box-center {
+    width: 100%;
+    max-width: 400px;
+    margin: 5% auto 0;
+}
+
+.login a.logo {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto 40px;
+}
+a.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.login .panel{
+    border: 1px solid #d7dbdc;
+}
+
+.login .admin-block-head h3.panel-title {
+    margin-top: 4px;
+}

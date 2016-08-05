@@ -1,0 +1,131 @@
+{{#yield-content}}
+
+
+<section id="splashVideoCont">
+   <div id="splashVideoCropper">
+      <video autoplay loop muted poster="img/splash-statics/slide1.jpg">
+         <source src="media/HomePage.webmsd.webm" type="video/mp4">
+         <img src="img/splash-statics/slide1.jpg">
+      </video>
+      <img src="img/splash-statics/slide1.jpg">
+   </div>
+   <div id="videoOverlayWrapper">
+      <div id="searchOuterWrapper">
+         <div id="searchWrapper">
+            <form id="search" method="get" action="/search/index">
+               <div id="searchContainer">
+                  <div id="searchBackground"></div>
+
+                  <div class="searchInline" id="activityListWrap">
+                     <select name="activity" class="selectpicker" title="What activity are you game for?" data-selected-text-format="count>2">
+                        <option value='41'>Kayaking is fun</option><option value='44'>Sailing</option><option value='43'>Windsurfing</option><option value='39'>Stand Up Paddling</option><option value='27'>Diving</option><option value='32'>Wakeboarding</option><option value='25'>Fishing</option><option value='26'>Yacht Chartering</option>                                </select>
+
+
+                     <script>
+                        // init the selectpicker
+                        $('.selectpicker').selectpicker();
+
+                        // bind selection to toggling of text colors on the select
+                        // so that the placeholder color is maintained
+                        $(function() {
+                           var $filterOption = $('#activityListWrap .filter-option');
+                           var selectPlaceholder = $('#activityListWrap select').attr('title');
+
+                           $('ul.dropdown-menu>li>a').on('click', function() {
+                              setTimeout(function() {
+                                 if ($filterOption.html() === selectPlaceholder) $filterOption.css('color', '#ccc');
+                                 else $filterOption.css('color', '#606060');
+                              },0);
+                           });
+
+                        });
+
+                     </script>
+                     <script type="text/javascript">
+                        $(document).ready(function(){
+
+                           $('form#search').submit(function(e){
+                                      e.preventDefault();
+                                      var form = $(this);
+                                      var data = form.serializeArray();
+                                      var date = new Date(data[1].value);
+                                      var dateStamp = date.getTime() / 1000;
+                                      var serviceId = data[0].value;
+                                      var url = form.attr('action');
+                                      console.log(url);
+                                      url+='/'+serviceId+'/'+dateStamp;
+                                      console.log(url);
+                                      window.location.href=url;
+                                   }
+                           );
+                        });
+                     </script>
+
+                  </div>
+
+                  <div class="searchInline">
+                     <input id="searchDate" name="date" type='text' class="form-control" placeholder="On which date?">
+
+
+                     <script>
+                        $(function () {
+                           $('#searchDate').datetimepicker({
+                              format: 'DD-MMM-YYYY',
+                              minDate: new Date
+                           }).on('dp.hide', function() {
+                              $(this).blur();
+                           }).on('keydown', function(e) {
+                              e.preventDefault();
+                           });
+                        });
+                     </script>
+
+                  </div>
+
+                  <div class="searchInline">
+                     <button id="startYourAdventure" class="btn btnDefaults btnFillOrange" type="submit">BOOK A SPOT</button>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section id="about">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="aboutBlocks col-md-3 col-sm-6">
+            <p><i class="aboutHeaderIcon icon-magnifier"></i></p>
+            <p class="aboutDescription">Find activities easily.</p>
+            <h2 class="aboutTitle headerAlt">SEARCH ACTIVITIES</h2>
+         </div>
+         <div class="aboutBlocks col-md-3 col-sm-6">
+            <p><i class="aboutHeaderIcon icon-book-open"></i></p>
+            <p class="aboutDescription">View activity galleries and review.</p>
+            <h2 class="aboutTitle headerAlt">GET INFORMATION</h2>
+         </div>
+         <div class="aboutBlocks col-md-3 col-sm-6">
+            <p><i class="aboutHeaderIcon icon-credit-card"></i></p>
+            <p class="aboutDescription">Simple, fuss free booking and payment.</p>
+            <h2 class="aboutTitle headerAlt">MAKE BOOKING</h2>
+         </div>
+         <div class="aboutBlocks col-md-3 col-sm-6">
+            <p><i class="aboutHeaderIcon icon-bell"></i></p>
+            <p class="aboutDescription">Watch out for timed offers.</p>
+            <h2 class="aboutTitle headerAlt">ENJOY DISCOUNTS</h2>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section id="activities">
+   <header>
+      <h1 class="headerAlt homePageContentHeader">WHAT ARE YOU GAME FOR?</h1>
+      <p class="beforeHeader">Select a category</p>
+   </header>
+   <!-- NOTE: Use class .activities1x1, .activities2x1 and .activities2x2 to create "blocks" -->
+   <div id="activitiesContainer"></div>
+   <div class="clearfix"></div>
+</section>
+{{/yield-content}}

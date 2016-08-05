@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html
+        class="ie ie6" lang="en-US"> <![endif]--> <!--[if IE 7 ]><html
+        class="ie ie7" lang="en-US"> <![endif]--> <!--[if IE 8 ]><html
+        class="ie ie8" lang="en-US"> <![endif]--> <!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en-US" ng-app="waterspotApp"> <!--<![endif]-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- FACEBOOK -->
+    <meta property="og:title" content="Waterspot">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.waterspot.com.sg">
+    <meta property="og:image" content="http://www.waterspot.com.sg/img/logo-colored.png">
+    <meta property="og:site_name" content="Waterspot">
+    <!-- FACEBOOK -->
+    <title>WaterSpot | Book Water Activities Quickly and Easily</title>
+    <meta name="description" content="Water Sports Services" />
+    <meta name="viewport" content="initial-scale=1">
+    <meta name="keywords" content="Water Sports" />
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+
+    <!-- Bootstrap: JS is at the bottom -->
+    <link rel="stylesheet" href="/js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-datetimepicker.css">
+
+    <!-- Other Library style sheets -->
+    <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/simple-line-icons/simple-line-icons.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.5/css/bootstrap-select.min.css">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+    <!-- jQuery -->
+    <script src="/js/jquery-1.11.1/jquery.min.js"></script>
+
+    <!-- Page specific scripts required for early rendering -->
+    <script src="/js/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="/js/page-specifics/index.js"></script>
+    <script src="/js/app.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <!-- Page specific style sheet -->
+    <link rel="stylesheet" href="/css/index.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/flexslider.css" />
+    <link rel="stylesheet" type="text/css" href="/css/jcarousel.responsive.css" />
+
+    <link rel="stylesheet" type="text/css" href="/css/mobile.css" />
+
+    <script type="text/javascript" src="/js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="/js/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript" src="/js/jcarousel.responsive.js"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        $(window).load(function(){
+            $('.flexslider').flexslider({
+                animation: 'fade',
+                start: function(slider){
+                    $('body').removeClass('loading');
+                }
+            });
+        });
+        //]]>
+    </script>    <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="css/ie.css"/>
+    <![endif]-->
+    <script type="text/javascript">
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + "; " + expires;
+        }
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1);
+                if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+            }
+            return "";
+        }
+    </script>
+
+    <!--Start of Zopim Live Chat Script-->
+    <script type="text/javascript">
+        /*
+         window.$zopim || (function (d, s) {
+         var z = $zopim = function (c) {
+         z._.push(c)
+         }, $ = z.s =
+         d.createElement(s), e = d.getElementsByTagName(s)[0];
+         z.set = function (o) {
+         z.set.
+         _.push(o)
+         };
+         z._ = [];
+         z.set._ = [];
+         $.async = !0;
+         $.setAttribute("charset", "utf-8");
+         $.src = "//v2.zopim.com/?3XpbaUCdbliNatQpLfqedXCdaaXM1Hfl";
+         z.t = +new Date;
+         $.
+         type = "text/javascript";
+         e.parentNode.insertBefore($, e)
+         })(document, "script");
+         */
+    </script>
+    <!--End of Zopim Live Chat Script-->
+
+
+    <!-- Google Analytics Tracking Code -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-73133827-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+                document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '875728282538653');
+        fbq('track', "PageView");</script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=875728282538653&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+</head>
+
+
+
+<style type="text/css">
+    div.star-rating, div.star-rating a {
+        background:url('/jQuery.Plugins/ratings/rating-water-spot.png') no-repeat 0 0px;
+    }
+</style>
+
+
+<body>
+
+<section id="navWrapper" class="">
+    <div id="fb-root"></div>
+    <form id="fb_login" style="display:none;" action="/members/fb_login" method="post">
+        <input type="hidden" name="first_name" id="fb_fname">
+        <input type="hidden" name="last_name" id="fb_lname">
+        <input type="hidden" name="email_id" id="fb_email">
+        <input type="hidden" name="phone" id="fb_phone">
+        <input type="hidden" name="fb_id" id="fb_id">
+    </form>
+    <script>
+        // This is called with the results from from FB.getLoginStatus().
+        function statusChangeCallback(response) {
+            if (response.status === 'connected') {
+                FB.api('/me?fields=id,email,name', function(response) {
+                    // alert(JSON.stringify(response));
+                    email = response.email;
+                    first_name = response.name;
+                    fb_id = response.id;
+                    //this is because in fb the user can use phone number to log in
+                    if (email.indexOf('@') == -1) {
+                        document.getElementById('fb_phone').value = email;
+                    } else {
+                        document.getElementById('fb_email').value = email;
+                    }
+                    document.getElementById('fb_id').value = fb_id;
+                    document.getElementById('fb_fname').value = first_name;
+                    document.getElementById('fb_login').submit();
+                });
+            } else if (response.status === 'not_authorized') {
+                // logged in facebook but not authorized
+            } else {
+                // not logged ni facebook
+            }
+        }
+        function checkLoginState() {
+            FB.getLoginStatus(function(response) {
+                statusChangeCallback(response);
+            });
+        }
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '1725992164290232',
+                cookie     : true,  // enable cookies to allow the server to access
+                                    // the session
+                xfbml      : true,  // parse social plugins on this page
+                version    : 'v2.4' // use version 2.2
+            });
+            // auto check if the user is logged in.
+            // FB.getLoginStatus(function(response) {
+            //   statusChangeCallback(response);
+            // });
+
+        };
+        // Load the SDK asynchronously
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <a href="/">
+        <div id="logoWrapper" xmlns="http://www.w3.org/1999/html">
+            <img id="whiteLogo" alt="Waterspot" src="/img/logo-white.png">
+            <img id="coloredLogo" alt="Waterspot" src="/img/logo-colored.png">
+        </div>
+    </a>
+    <nav>
+        <a href="/">
+            <div class="navGroup">
+                <div class="navButtonOuter navActive">
+                    <i class="fa fa-home"></i><span class="navTextLabel">HOME</span>
+                </div>
+            </div>
+        </a>
+        <a href="/activities/">
+            <div class="navGroup">
+                <div class="navButtonOuter ">
+                    <i class="fa fa-ship"></i><span class="navTextLabel">ACTIVITIES</span>
+                </div>
+            </div>
+        </a>
+        <div class="navGroup">
+            <div class="navButtonOuter" data-toggle="popover" data-placement="bottom">
+                <i class="fa fa-user"></i><span class="navTextLabel">LOGIN/SIGNUP</span>
+            </div>
+        </div>
+    </nav>
+</section>
+
+<section id="splashVideoCont">
+    <div id="splashVideoCropper">
+        <video autoplay loop muted poster="img/splash-statics/slide1.jpg">
+            <source src="media/HomePage.webmsd.webm" type="video/mp4">
+            <img src="img/splash-statics/slide1.jpg">
+        </video>
+        <img src="img/splash-statics/slide1.jpg">
+    </div>
+    <div id="videoOverlayWrapper">
+        <div id="searchOuterWrapper">
+            <div id="searchWrapper">
+                <form id="search" method="get" action="/search/index">
+                    <div id="searchContainer">
+                        <div id="searchBackground"></div>
+
+                        <div class="searchInline" id="activityListWrap">
+                            <select name="activity" class="selectpicker" title="What activity are you game for?" data-selected-text-format="count>2">
+                                <option value='41'>Kayaking is fun</option><option value='44'>Sailing</option><option value='43'>Windsurfing</option><option value='39'>Stand Up Paddling</option><option value='27'>Diving</option><option value='32'>Wakeboarding</option><option value='25'>Fishing</option><option value='26'>Yacht Chartering</option>                                </select>
+
+
+                            <script>
+                                // init the selectpicker
+                                $('.selectpicker').selectpicker();
+
+                                // bind selection to toggling of text colors on the select
+                                // so that the placeholder color is maintained
+                                $(function() {
+                                    var $filterOption = $('#activityListWrap .filter-option');
+                                    var selectPlaceholder = $('#activityListWrap select').attr('title');
+
+                                    $('ul.dropdown-menu>li>a').on('click', function() {
+                                        setTimeout(function() {
+                                            if ($filterOption.html() === selectPlaceholder) $filterOption.css('color', '#ccc');
+                                            else $filterOption.css('color', '#606060');
+                                        },0);
+                                    });
+
+                                });
+
+                            </script>
+                            <script type="text/javascript">
+                                $(document).ready(function(){
+
+                                    $('form#search').submit(function(e){
+                                                e.preventDefault();
+                                                var form = $(this);
+                                                var data = form.serializeArray();
+                                                var date = new Date(data[1].value);
+                                                var dateStamp = date.getTime() / 1000;
+                                                var serviceId = data[0].value;
+                                                var url = form.attr('action');
+                                                console.log(url);
+                                                url+='/'+serviceId+'/'+dateStamp;
+                                                console.log(url);
+                                                window.location.href=url;
+                                            }
+                                    );
+                                });
+                            </script>
+
+                        </div>
+
+                        <div class="searchInline">
+                            <input id="searchDate" name="date" type='text' class="form-control" placeholder="On which date?">
+
+                            <script>
+                                $(function () {
+                                    $('#searchDate').datetimepicker({
+                                        format: 'DD-MMM-YYYY',
+                                        minDate: new Date
+                                    }).on('dp.hide', function() {
+                                        $(this).blur();
+                                    }).on('keydown', function(e) {
+                                        e.preventDefault();
+                                    });
+                                });
+                            </script>
+
+                        </div>
+
+                        <div class="searchInline">
+                            <button id="startYourAdventure" class="btn btnDefaults btnFillOrange" type="submit">BOOK A SPOT</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<div ng-controller="usersController"></div>
+
+<section id="about">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="aboutBlocks col-md-3 col-sm-6">
+                <p><i class="aboutHeaderIcon icon-magnifier"></i></p>
+                <p class="aboutDescription">Find activities easily.</p>
+                <h2 class="aboutTitle headerAlt">SEARCH ACTIVITIES</h2>
+            </div>
+            <div class="aboutBlocks col-md-3 col-sm-6">
+                <p><i class="aboutHeaderIcon icon-book-open"></i></p>
+                <p class="aboutDescription">View activity galleries and review.</p>
+                <h2 class="aboutTitle headerAlt">GET INFORMATION</h2>
+            </div>
+            <div class="aboutBlocks col-md-3 col-sm-6">
+                <p><i class="aboutHeaderIcon icon-credit-card"></i></p>
+                <p class="aboutDescription">Simple, fuss free booking and payment.</p>
+                <h2 class="aboutTitle headerAlt">MAKE BOOKING</h2>
+            </div>
+            <div class="aboutBlocks col-md-3 col-sm-6">
+                <p><i class="aboutHeaderIcon icon-bell"></i></p>
+                <p class="aboutDescription">Watch out for timed offers.</p>
+                <h2 class="aboutTitle headerAlt">ENJOY DISCOUNTS</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="activities">
+    <header>
+        <h1 class="headerAlt homePageContentHeader">WHAT ARE YOU GAME FOR?</h1>
+        <p class="beforeHeader">Select a category</p>
+    </header>
+    <!-- NOTE: Use class .activities1x1, .activities2x1 and .activities2x2 to create "blocks" -->
+    <div id="activitiesContainer"></div>
+    <div class="clearfix"></div>
+</section>
+
+<div class="clear"></div>
+
+<div class="footer">
+    <section id="footer">
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- contacts block -->
+                <div class="footerCol col-sm-4 col-sm-offset-1">
+                    <div class="footerContactBlock">
+                        <p class="footerContactSmallHeader">call us</p>
+
+                        <p class="footerContactAfterHeader">+65 8299 2678</p>
+                    </div>
+                    <div class="footerContactBlock">
+                        <p class="footerContactSmallHeader">send an enquiry</p>
+
+                        <p class="footerContactAfterHeader">enquiry@waterspot.com.sg</p>
+                    </div>
+                    <div class="footerContactBlock">
+                        <p class="footerContactSmallHeader">FOLLOW US</p>
+
+                        <div id="footerSocialRow">
+                            <a class="smIcons" href="https://www.facebook.com/waterspotllp"><img alt="facebook" src="/img/sm-icons/facebook.png"><img alt="facebook" src="/img/sm-icons/facebook.png"></a><a class="smIcons" href="https://www.instagram.com/waterspotsg"><img alt="instagram" src="/img/sm-icons/instagram.png"><img alt="instagram" src="/img/sm-icons/instagram.png"></a><a class="smIcons" href="https://twitter.com/waterspotllp"><img alt="twitter" src="/img/sm-icons/twitter.png"><img alt="twitter" src="/img/sm-icons/twitter.png"></a>                    </div>
+                    </div>
+                </div>
+
+                <!-- subscribe block -->
+                <div class="footerCol col-sm-4">
+                    <p class="footerContactSmallHeader">SUBSCRIBE</p>
+                    <!-- Begin MailChimp Signup Form -->
+                    <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+                    <style type="text/css">
+                        /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                    </style>
+                    <div id="mc_embed_signup">
+                        <form action="//waterspot.us11.list-manage.com/subscribe/post?u=5931912452094114bc63c4074&amp;id=750e43a4a4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            <div id="mc_embed_signup_scroll">
+                                <h2>Get Latest <strong>Offers</strong> & <strong>Coupons</strong> by Email:</h2>
+                                <div class="mc-field-group" style="width:100%;">
+                                    <!-- <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span> -->
+                                    </label>
+                                    <input type="email" placeholder="* Email Address" value="" name="EMAIL" class="form-control required email" id="mce-EMAIL" style="
+  color: #999;
+  background-color: rgba(0,0,0,.2);
+  border-color: rgba(0,0,0,.25);">
+                                </div>
+                                <div id="mce-responses" class="clear">
+                                    <div class="response" id="mce-error-response" style="display:none"></div>
+                                    <div class="response" id="mce-success-response" style="display:none"></div>
+                                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5931912452094114bc63c4074_750e43a4a4" tabindex="-1" value=""></div>
+                                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btnFillOrange" style="width:100%; margin:0;"></div>
+                            </div>
+                        </form>
+                    </div>
+                    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+                    <!--End mc_embed_signup-->
+                </div>
+            </div>
+            <!-- popular block -->
+            <!--<div class="footerCol col-sm-4">
+                <h4 class="headerAlt">POPULAR ACTIVITIES</h4>
+                <ul id="footerPopularList">
+                    <li><a href="/service-type-details/39">Stand Up Paddle</a></li>
+                    <li><a href="/service-type-details/27">Diving</a></li>
+                    <li><a href="/service-type-details/42">Kitesurfing</a></li>
+                    <li><a href="/service-type-details/41">Kayaking</a></li>
+                    <li><a href="/service-type-details/26">Boat Charter</a></li>
+                </ul>
+            </div>-->
+        </div>
+    </section>
+
+    <!-- bottommost row -->
+    <section id="copyright">
+        <div class="container-fluid">
+            <div class="row">
+                <div id="copyrightLeftCol" class="col-sm-6">
+                    <p>Copyright © 2015 WaterSpot LLP. All rights reserved.</p>
+
+                    <p><a href="/terms">Terms & Conditions</a> / <a href="privacypolicy">Privacy Policy</a>
+                </div>
+                <div id="paymentLogoCont" class="col-sm-6">
+                    <img alt="payment gateways" src="/img/footer-payment.png">
+                </div>
+            </div>
+        </div>
+    </section>			</div>
+
+<script>
+    var frontPageActivities = activitiesBlockMaker.init($('#activitiesContainer'), [
+        { title: 'wakeboarding',urlPath:'/service-type-details/wakeboarding', imagePath: '/img/activities/wakeboarding.jpg', blockSize: '2x1'},
+        { title: 'diving',urlPath:'/service-type-details/diving', imagePath: '/img/activities/diving.jpg'},
+        { title: 'kayaking',urlPath:'/service-type-details/kayaking', imagePath: '/img/activities/kayaking.jpg'},
+        { title: 'fishing',urlPath:'/service-type-details/fishing', imagePath: '/img/activities/fishing.jpg'},
+        { title: 'kitesurfing',urlPath:'/service-type-details/kiteboarding', imagePath: '/img/activities/kitesurfing.jpg'},
+        { title: 'Yacht Chartering',urlPath:'/service-type-details/yacht-chartering', imagePath: '/img/activities/boatcharter.jpg', blockSize: '2x2'},
+        { title: 'sailing',urlPath:'/service-type-details/sailing', imagePath: '/img/activities/sailing.jpg'},
+        { title: 'Stand up Paddling',urlPath:'/service-type-details/stand-up-paddling', imagePath: '/img/activities/stand-up-paddle.jpg'}
+    ]);
+
+</script>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $('#VendorsLogin').submit(function(){
+
+            //var data = $(this).serializeArray();
+            var data = new FormData(this);
+            var formData = $(this);
+            var status = 0;
+
+            $.each(this,function(i,v){
+                $(v).removeClass('invalid form-error');
+            });
+            $('.error-message').remove();
+            $('#VendorLogin > span#for_owner_cms').show();
+            $('#VendorLogin > button[type=submit]').attr({'disabled':true});
+
+            $.ajax({
+                url: '/vendor_manager/vendors/validation/login',
+                async: false,
+                data: data,
+                dataType:'json',
+                type:'post',
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function(data) {
+
+                    if(data.error==1){
+                        $.each(data.errors,function(i,v){
+                            $('#'+i).addClass("invalid form-error").after('<div class="error-message">'+v+'</div>');
+                            $('#'+i).bind('click',function(){
+                                $(this).removeClass('invalid form-error');
+                                $(this).next().remove();
+                            });
+                        });
+                    }else{
+                        status = 1;
+                    }
+
+                }
+            });
+            if(status==0){
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+                $('#VendorLogin > button[type=submit]').attr({'disabled':false});
+                $('#VendorLogin > span#for_owner_cms').hide();
+            }
+
+            return (status===1)?true:false;
+
+        });
+
+        $('#VendorRegistration').submit(function(){
+
+            //var data = $(this).serializeArray();
+            var data = new FormData(this);
+            var formData = $(this);
+            var status = 0;
+
+            $.each(this,function(i,v){
+                $(v).removeClass('invalid form-error');
+            });
+            $('.error-message').remove();
+            $('#VendorRegistration > span#for_owner_cms').show();
+            $('#VendorRegistration > button[type=submit]').attr({'disabled':true});
+
+            $.ajax({
+                url: '/vendor_manager/vendors/validation',
+                async: false,
+                data: data,
+                dataType:'json',
+                type:'post',
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function(data) {
+
+                    if(data.error==1){
+                        $.each(data.errors,function(i,v){
+                            $('#'+i).addClass("invalid form-error").after('<div class="error-message">'+v+'</div>');
+                            $('#'+i).bind('click',function(){
+                                $(this).removeClass('invalid form-error');
+                                $(this).next().remove();
+                            });
+                        });
+                    }else{
+                        status = 1;
+                    }
+
+                }
+            });
+            if(status==0){
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+                $('#VendorRegistration > button[type=submit]').attr({'disabled':false});
+                $('#VendorRegistration > span#for_owner_cms').hide();
+            }
+            return (status===1)?true:false;
+
+        });
+
+
+
+    });
+</script>
+
+<!-- Javascripts -->
+<script src="/js/bootstrap/js/bootstrap.min.js"></script>
+<script src="/js/moment/min/moment.min.js"></script>
+<script src="/js/velocity/velocity.min.js"></script>
+<script src="/js/velocity/velocity.ui.min.js"></script>
+<script src="/js/iaStickySidebar.js"></script>
+<script src="/js/lib.js"></script>
+
+<!--Start of Zopim Live Chat Script-->
+<script type="text/javascript">
+    /*
+     window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+     d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+     _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+     $.src='//v2.zopim.com/?22xiIuDbFx71G2grZvKsPLWDNEWrYeB6';z.t=+new Date;$.
+     type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+     */
+
+</script>
+<!--End of Zopim Live Chat Script-->
+
+<style type="text/css">
+    /* Styling the button */
+    div#livechat-compact-container {
+        bottom: -100px!important;
+    }
+
+    .chat-button-holder {
+        position: fixed;
+        z-index: 99;
+        right: 10px;
+        bottom: 10px;
+    }
+    div#livechat-full {
+        right: 0px!important;
+    }
+</style>
+<!-- Start of LiveChat (www.livechatinc.com) code -->
+<script type="text/javascript">
+    window.__lc = window.__lc || {};
+    window.__lc.license = 7227401;
+    (function() {
+        var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+        lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+    })();
+</script>
+<div class="chat-button-holder">
+    <div data-id="VV3wwCCN_B" class="livechat_button"><a href="https://www.livechatinc.com/customer-service-software/?partner=lc_7227401&amp;utm_source=chat_button">customer service software</a></div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

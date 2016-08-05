@@ -1,0 +1,24 @@
+{
+  "name": "waterspot",
+  "authors": [
+    "jakemarvin05 <jakemarvin05@gmail.com>"
+  ],
+  "description": "Waterspot website version 2.0",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fullcalendar": "^2.9.1",
+    "amcharts": "^3.15.2",
+    "angular-bootstrap": "^2.0.1",
+    "angular-animate": "^1.5.8"
+  }
+}
