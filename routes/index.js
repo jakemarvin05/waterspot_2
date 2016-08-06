@@ -6,10 +6,9 @@ var router = express.Router();
   // HOME PAGE (with login links) ========
   // =====================================
   router.get('/', function(req, res) {
-    res.locals = { title : 'Home' };
     res.render('home',{
          // "name": "Jake"
-      }); // load the index.ejs file
+      });
   });
 
 router.get('/admin-test', function(req, res) {

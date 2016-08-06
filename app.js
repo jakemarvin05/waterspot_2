@@ -109,7 +109,6 @@ if (app.get('env') === 'development') {
             res.status(err.status);
             res.send(err.message);
         } else {
-            console.error(err);
             res.render('error', {
                 message: err.message,
                 error: err
